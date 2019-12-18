@@ -1,11 +1,3 @@
-## AzureHole
-Based on [Pi-hole](https://pi-hole.net/)
-
-**Pi-hole** is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole, intended for use on a private network.
-
-**AzureHole** is the arm template to create and run Pi-hole in Azure Container Instance (ACI), having the settings in a storage account.
-
-
 # Create resource group
 az group create --location westeurope --name pihole-rg
 
@@ -46,3 +38,4 @@ pihole -a -p testqwerty123456
 
 # Get the IP address for the Container Group
 az container show --resource-group pihole-rg --name pihole --query ipAddress.ip --output tsv
+

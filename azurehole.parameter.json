@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "westeurope"
+        },
+        "containerName": {
+            "value": "pihole"
+        },
+        "imageName": {
+            "value": "pihole/pihole:latest"
+        },
+        "timeZone": {
+            "value": "Europe/Oslo"
+        },
+        "webPassword": {
+            "value": "test12345"
+        },
+        "numberCpuCores": {
+            "value": "1"
+        },
+        "memory": {
+            "value": "1"
+        },
+        "restartPolicy": {
+            "value": "OnFailure"
+        },
+        "dnsNameLabel": {
+            "value": "mypihole"
+        },
+        "ipAddressType": {
+            "value": "Public"
+        },
+        "storageAccountName": {
+            "value": "piholestrgacc"
+        },
+        "storageAccountKey": {
+            "value": "xxwZ4erV3tTnUq1.......................nWcmAlMiFLypllj2fsCQw=="
+        }
+    }
+}
