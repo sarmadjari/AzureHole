@@ -50,8 +50,13 @@ _remeber to update the **azurehole.parameter.json** file with the desired values
 
     az group deployment create --resource-group pihole-rg --template-file azurehole.template.json --parameters azurehole.parameter.json
 
+
+
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/sarmadjari/AzureHole/master/azurehole.template.json" target="_blank">
-    <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/>
+    <img src="https://raw.githubusercontent.com/sarmadjari/AzureHole/master/images/deploytoazure.png"/>
+</a>
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsarmadjari%2FAzureHole%2Fmaster%2Fazurehole.template.json" target="_blank">
+    <img src="https://raw.githubusercontent.com/sarmadjari/AzureHole/master/images/deploytoazure.png"/>
 </a>
 
 ### Usefull commands
