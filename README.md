@@ -42,7 +42,9 @@ Based on [Pi-hole](https://pi-hole.net/)
 		}
 	]
 
-**Use one of them and copy it to the parameter file (azurehole.parameter.json)**
+**Use one of them and copy it to the parameter file (_azurehole.parameter.json_)**
+
+_remeber to update the **azurehole.parameter.json** file with the desired values_
 
 **Run the deplyment**
 
