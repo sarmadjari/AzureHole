@@ -42,8 +42,8 @@ Based on [Pi-hole](https://pi-hole.net/)
 		}
 	]
 
-**Use one of them and copy it to the parameter file (_azurehole.parameter.json_)**
 
+**note the Azure Storage Account name and one of the keys to use one of them in the parameter file (_azurehole.parameter.json_)**
 _remeber to update the **azurehole.parameter.json** file with the desired values_
 
 **Run the deplyment**
@@ -52,9 +52,8 @@ _remeber to update the **azurehole.parameter.json** file with the desired values
 
 
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https://raw.githubusercontent.com/sarmadjari/AzureHole/master/azurehole.template.json" target="_blank">
-    <img src="https://raw.githubusercontent.com/sarmadjari/AzureHole/master/images/deploytoazure.png"/>
-</a>
+**Or hitting in the link below (remember the Azure Storage Account name and one of the keys)** 
+
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsarmadjari%2FAzureHole%2Fmaster%2Fazurehole.template.json" target="_blank">
     <img src="https://raw.githubusercontent.com/sarmadjari/AzureHole/master/images/deploytoazure.png"/>
 </a>

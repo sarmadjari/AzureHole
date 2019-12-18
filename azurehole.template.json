@@ -6,25 +6,46 @@
          "type":"string"
       },
       "containerName":{
-         "type":"string"
+         "type":"string",
+         "defaultValue": "pihole",
+         "metadata": {
+            "description": "Name of the Container"
+          }
       },
       "imageName":{
          "type":"string",
-         "defaultValue": "pihole/pihole:latest"
+         "defaultValue": "pihole/pihole:latest",
+         "allowedValues":["pihole/pihole:latest"],
+         "metadata": {
+            "description": "Pihole container image"
+          }
       },
       "timeZone":{
          "type":"string",
-         "defaultValue": "Europe/Oslo"
+         "defaultValue": "Europe/Oslo",
+         "metadata": {
+            "description": "Time Zone"
+          }
       },
       "webPassword":{
          "type":"securestring",
-         "defaultValue": "[concat(substring(uniqueString(resourceGroup().id),0,4),'-',substring(uniqueString(resourceGroup().id),5,8),'-', substring(uniqueString(resourceGroup().id),9,12))]"
+         "metadata": {
+            "description": "Paasowrd for the web admin login"
+          }
       },
       "numberCpuCores":{
-         "type":"string"
+         "type":"string",
+         "defaultValue": "1",
+         "metadata": {
+            "description": "Number of CPU Cores"
+          }
       },
       "memory":{
-         "type":"string"
+         "type":"string",
+         "defaultValue": "1",
+         "metadata": {
+            "description": "Memory size in GB"
+          }
       },
       "restartPolicy":{
          "type":"string",
@@ -33,22 +54,19 @@
             "OnFailure",
             "Always",
             "Never"
-         ]
-      },
-      "osType":{
-         "type":"string",
-         "defaultValue": "Linux"
-      },
-      "ipAddressType":{
-         "type":"string",
-         "defaultValue": "Public"
+         ],
+         "metadata": {
+            "description": "Container restart policy"
+          }
       },
       "dnsNameLabel":{
-         "type":"string"
+         "type":"string",
+         "metadata": {
+            "description": "Unique domian name"
+          }
       },
       "storageAccountName": {
-         "type":"string",
-         "defaultValue": "[concat('piholestorage',uniqueString(resourceGroup().id))]"
+         "type":"string"
      },
      "storageAccountKey": {
       "type":"string"
@@ -56,6 +74,7 @@
       "etcPihole":{
          "type":"string",
          "defaultValue": "pihole-etc-pihole",
+         "allowedValues":["pihole-etc-pihole"],
          "metadata": {
             "description": "Pihole settings"
           }
@@ -63,6 +82,7 @@
       "etcDnsmasq": {
          "type": "string",
          "defaultValue": "pihole-etc-dnsmasq",
+         "allowedValues":["pihole-etc-pihole"],
          "metadata": {
            "description": "Dnsmasq settings"
          }
@@ -146,9 +166,9 @@
                }
             ],
             "restartPolicy":"[parameters('restartPolicy')]",
-            "osType":"[parameters('osType')]",
+            "osType":"linux",
             "ipAddress":{
-               "type":"[parameters('ipAddressType')]",
+               "type":"Public",
                "ports":[
                         {
                            "port": "53",
