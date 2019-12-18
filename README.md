@@ -50,7 +50,7 @@ _remeber to update the **azurehole.parameter.json** file with the desired values
 
     az group deployment create --resource-group pihole-rg --template-file azurehole.template.json --parameters azurehole.parameter.json
 
-  
+[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/sarmadjari/AzureHole)
 
 ### Usefull commands
 
