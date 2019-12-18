@@ -71,26 +71,10 @@
       },
       "storageAccountName": {
          "type":"string"
-     },
-     "storageAccountKey": {
-      "type":"string"
-   },
-      "etcPihole":{
-         "type":"string",
-         "defaultValue": "pihole-etc-pihole",
-         "allowedValues":["pihole-etc-pihole"],
-         "metadata": {
-            "description": "Pihole settings"
-          }
       },
-      "etcDnsmasq": {
-         "type": "string",
-         "defaultValue": "pihole-etc-dnsmasq",
-         "allowedValues":["pihole-etc-dnsmasq"],
-         "metadata": {
-           "description": "Dnsmasq settings"
-         }
-       }
+      "storageAccountKey": {
+         "type":"string"
+      }
    },
    "resources":[
       {
@@ -103,7 +87,7 @@
                {
                   "name":"vpihole",
                   "azureFile":{
-                     "shareName":"[parameters('etcPihole')]",
+                     "shareName":"pihole-etc-pihole",
                      "storageAccountName":"[parameters('storageAccountName')]",
                      "storageAccountKey":"[parameters('storageAccountKey')]"
                   }
@@ -111,7 +95,7 @@
                {
                   "name":"vdnsmasq",
                   "azureFile":{
-                     "shareName":"[parameters('etcDnsmasq')]",
+                     "shareName":"pihole-etc-dnsmasq",
                      "storageAccountName":"[parameters('storageAccountName')]",
                      "storageAccountKey":"[parameters('storageAccountKey')]"
                   }
