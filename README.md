@@ -3,7 +3,7 @@
 
 Based on [Pi-hole](https://pi-hole.net/)
 
-  
+
 
 **Pi-hole** is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole, intended for use on a private network.
 
@@ -17,7 +17,7 @@ Based on [Pi-hole](https://pi-hole.net/)
 
 **Create Storage Account**
 
-    az storage account create --name piholestrgacc --kind FileStorage --sku Standard_LRS --resource-group pihole-rg
+    az storage account create --name piholestrgacc --resource-group pihole-rg
 
 **Create shares**
 
@@ -52,7 +52,7 @@ _remeber to update the **azurehole.parameter.json** file with the desired values
 
 
 
-**Or hitting in the link below (remember the Azure Storage Account name and one of the keys)** 
+**Or hitting in the link below (remember the Azure Storage Account name and one of the keys)**
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsarmadjari%2FAzureHole%2Fmaster%2Fazurehole.template.json" target="_blank">
     <img src="https://raw.githubusercontent.com/sarmadjari/AzureHole/master/images/deploytoazure.png"/>
@@ -64,13 +64,13 @@ _remeber to update the **azurehole.parameter.json** file with the desired values
 
     az container exec --resource-group pihole-rg --name pihole --exec-command "/bin/bash"
 
-  
+
 
 **to change the password from withing the container**
 
     pihole -a -p testqwerty123456
 
-  
+
 
 **Get the IP address for the Container Group**
 
